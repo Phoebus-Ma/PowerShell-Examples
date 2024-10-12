@@ -4,6 +4,21 @@
 # License - MIT.
 ###
 
+<#
+    [char]
+    [byte]
+    [int]
+    [long]
+    [float]
+    [double]
+    [decimal]
+    [bool]
+    [string]
+    [void]
+    [object]
+    [numeric]
+#>
+
 # Addition (+)
 function Addition {
     param ([int] $a, [int] $b)
