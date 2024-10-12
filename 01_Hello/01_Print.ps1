@@ -56,3 +56,8 @@ Write-Warning $Msg
 # --------------------------------
 # Display the red color string.
 Write-Error $Msg
+
+# Display.
+$name = "Tom"
+$age  = 18
+Write-Debug ("Name: {0}, Age: {1}" -f $name, $age)
