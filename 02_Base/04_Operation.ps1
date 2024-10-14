@@ -1,5 +1,5 @@
 ###
-# Four mixed operations.
+# Base operations.
 #
 # License - MIT.
 ###
