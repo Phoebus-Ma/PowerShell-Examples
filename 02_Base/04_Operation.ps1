@@ -115,4 +115,4 @@ $r10 = ShiftsBitsLeft  -a 1 -b 2
 $r11 = ShiftsBitsRight -a 4 -b 1
 
 # Result: 3, -1, 2, 0.5, 2, 1, -6, 7, 6, 4, 2.
-Write-Host "Result: $r1, $r2, $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $r11."
+Write-Output "Result: $r1, $r2, $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $r11."

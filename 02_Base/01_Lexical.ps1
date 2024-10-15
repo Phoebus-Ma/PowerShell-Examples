@@ -71,11 +71,11 @@
 # $$ contains the last token of last line input into the shell
 # $? Contains the success/fail status of the last statement
 
-Write-Host ("Hello World")
+Write-Output ("Hello World")
 # Return last do command status, success: True, failed: False.
 $?
 $$
 $^
 
-1,2,3 | ForEach-Object {Write-Host $_}
+1,2,3 | ForEach-Object {Write-Output $_}
 

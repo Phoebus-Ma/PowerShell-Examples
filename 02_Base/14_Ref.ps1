@@ -4,7 +4,7 @@
 # License - MIT.
 ###
 
-Write-Host "----------------Test 1----------------"
+Write-Output "----------------Test 1----------------"
 
 Function Test($data)
 {
@@ -16,7 +16,7 @@ Test -data $var
 $var
 
 
-Write-Host "----------------Test 2----------------"
+Write-Output "----------------Test 2----------------"
 
 Function Test2([ref]$data)
 {

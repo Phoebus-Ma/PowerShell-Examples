@@ -4,21 +4,21 @@
 # License - MIT.
 ###
 
-Write-Host "----------------Test 1----------------"
+Write-Output "----------------Test 1----------------"
 
 $letterArray = 'a','b','c','d'
 foreach ($letter in $letterArray)
 {
-    Write-Host $letter
+    Write-Output $letter
 }
 
 
-Write-Host "----------------Test 2----------------"
+Write-Output "----------------Test 2----------------"
 
 foreach ($Proc in Get-Process)
 {
     if ($Proc.Id -gt 20000)
     {
-        Write-Host $Proc
+        Write-Output $Proc
     }
 }

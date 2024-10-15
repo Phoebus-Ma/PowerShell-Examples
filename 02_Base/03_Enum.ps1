@@ -4,7 +4,7 @@
 # License - MIT.
 ###
 
-Write-Host "----------------Test 1----------------"
+Write-Output "----------------Test 1----------------"
 
 enum MarkdownUnorderedListCharacter {
     Asterisk
@@ -24,7 +24,7 @@ foreach ($Value in $ValuesToConvert) {
 }
 
 
-Write-Host "----------------Test 2----------------"
+Write-Output "----------------Test 2----------------"
 
 enum MediaTypes {
     unknown
@@ -50,7 +50,7 @@ enum MediaTypes {
 [MediaTypes].GetEnumValues()
 
 
-Write-Host "----------------Test 3----------------"
+Write-Output "----------------Test 3----------------"
 
 [Flags()] enum FileAttributes {
     Archive    = 1
@@ -74,7 +74,7 @@ Write-Host "----------------Test 3----------------"
 # file2 attributes are: Device, Directory, Encrypted
 
 
-Write-Host "----------------Test 4----------------"
+Write-Output "----------------Test 4----------------"
 
 enum EndOfLine {
     CR   = 1
@@ -105,7 +105,7 @@ process {
 ConvertTo-LineEndingRegex 2
 
 
-Write-Host "----------------Test 5----------------"
+Write-Output "----------------Test 5----------------"
 # Format
 enum TaskState {
     ToDo
@@ -136,7 +136,7 @@ foreach ($Format in @('G', 'D', 'X', 'F')) {
 }
 
 
-Write-Host "----------------Test 6----------------"
+Write-Output "----------------Test 6----------------"
 # GetEnumName
 enum GateState {
     Unknown
@@ -154,7 +154,7 @@ foreach ($Value in 0..4) {
 }
 
 
-Write-Host "----------------Test 7----------------"
+Write-Output "----------------Test 7----------------"
 # GetEnumNames
 enum Season {
     Unknown
@@ -168,7 +168,7 @@ enum Season {
 [Season].GetEnumNames()
 
 
-Write-Host "----------------Test 8----------------"
+Write-Output "----------------Test 8----------------"
 # GetEnumValues
 enum Season2 {
     Unknown
@@ -182,7 +182,7 @@ enum Season2 {
 [Season2].GetEnumValues()
 
 
-Write-Host "----------------Test 9----------------"
+Write-Output "----------------Test 9----------------"
 # HasFlag
 [Flags()] enum ModuleFeatures {
     Commands  = 1
@@ -200,7 +200,7 @@ foreach ($Feature in [ModuleFeatures].GetEnumValues()) {
 }
 
 
-Write-Host "----------------Test 9----------------"
+Write-Output "----------------Test 10----------------"
 # ToString
 enum Shade {
     White

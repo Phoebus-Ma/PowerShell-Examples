@@ -4,7 +4,7 @@
 # License - MIT.
 ###
 
-Write-Host "----------------Test 1----------------"
+Write-Output "----------------Test 1----------------"
 
 switch (3)
 {
@@ -15,7 +15,7 @@ switch (3)
 }
 
 
-Write-Host "----------------Test 2----------------"
+Write-Output "----------------Test 2----------------"
 
 switch (3)
 {
@@ -27,7 +27,7 @@ switch (3)
 }
 
 
-Write-Host "----------------Test 3----------------"
+Write-Output "----------------Test 3----------------"
 
 switch (3)
 {
@@ -39,7 +39,7 @@ switch (3)
 }
 
 
-Write-Host "----------------Test 4----------------"
+Write-Output "----------------Test 4----------------"
 
 switch (4, 2)
 {
@@ -51,7 +51,7 @@ switch (4, 2)
 }
 
 
-Write-Host "----------------Test 5----------------"
+Write-Output "----------------Test 5----------------"
 
 switch (4, 2)
 {
@@ -63,7 +63,7 @@ switch (4, 2)
 }
 
 
-Write-Host "----------------Test 6----------------"
+Write-Output "----------------Test 6----------------"
 
 $var = @{A = 10; B = 'abc'}
 
@@ -75,7 +75,7 @@ foreach ($key in $var.Keys) {
 }
 
 
-Write-Host "----------------Test 7----------------"
+Write-Output "----------------Test 7----------------"
 
 switch ("fourteen")
 {
@@ -90,7 +90,7 @@ switch ("fourteen")
 }
 
 
-Write-Host "----------------Test 8----------------"
+Write-Output "----------------Test 8----------------"
 
 switch -Wildcard ("fourteen")
 {
@@ -105,7 +105,7 @@ switch -Wildcard ("fourteen")
 }
 
 
-Write-Host "----------------Test 9----------------"
+Write-Output "----------------Test 9----------------"
 
 switch ("Test")
 {

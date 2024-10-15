@@ -43,21 +43,21 @@ $Week    = 3
 $isCheck = $false
 $isPlay  = $true
 
-Write-Host "----------------Test 1----------------"
+Write-Output "----------------Test 1----------------"
 
 if ($Week -le 4) {
-    Write-Host ("It is work day.")
+    Write-Output ("It is work day.")
 }
 
 
-Write-Host "----------------Test 2----------------"
+Write-Output "----------------Test 2----------------"
 
 if ($isCheck) {
-    Write-Host ("Already checked.")
+    Write-Output ("Already checked.")
 }
 elseif ($isPlay) {
-    Write-Host ("It is playing.")
+    Write-Output ("It is playing.")
 }
 else {
-    Write-Host ("No actite.")
+    Write-Output ("No actite.")
 }

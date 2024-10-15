@@ -8,5 +8,5 @@
 while($val -ne 3)
 {
     $val++
-    Write-Host $val
+    Write-Output $val
 }

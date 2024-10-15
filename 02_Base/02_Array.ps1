@@ -4,19 +4,19 @@
 # License - MIT.
 ###
 
-Write-Host "----------------Test 1----------------"
+Write-Output "----------------Test 1----------------"
 
 $A = 22, 5, 10, 8, 12, 9, 80
 $B = ,7
 $C = 5..8
 
-Write-Host "A = $A"
-Write-Host "A type: $A.GetType()"
-Write-Host "B = $B"
-Write-Host "C = $C"
+Write-Output "A = $A"
+Write-Output "A type: $A.GetType()"
+Write-Output "B = $B"
+Write-Output "C = $C"
 
 
-Write-Host "----------------Test 2----------------"
+Write-Output "----------------Test 2----------------"
 
 $a = @("Hello World")
 $a
@@ -31,7 +31,7 @@ $c = 0 .. 9
 $c[2..-2]
 
 
-Write-Host "----------------Test 3----------------"
+Write-Output "----------------Test 3----------------"
 
 $c = 0..9
 foreach ($element in $c) {
@@ -39,14 +39,14 @@ foreach ($element in $c) {
 }
 
 
-Write-Host "----------------Test 4----------------"
+Write-Output "----------------Test 4----------------"
 
 $a = @(0..4)
 $a += 5
 $a
 
 
-Write-Host "----------------Test 5----------------"
+Write-Output "----------------Test 5----------------"
 
 $a = @(
   @(0,1),
@@ -60,7 +60,7 @@ $a = @(
 "Process `$a[2][1]: $($a[2][1].ProcessName)"
 
 
-Write-Host "----------------Test 6----------------"
+Write-Output "----------------Test 6----------------"
 
 [string[,]]$rank2 = [string[,]]::New(3,2)
 $rank2.rank
@@ -74,7 +74,7 @@ $rank2[2,1] = 'f'
 $rank2[1,1]
 
 
-Write-Host "----------------Test 7----------------"
+Write-Output "----------------Test 7----------------"
 
 $a = "red",$true
 $b = (New-Object 'int[,]' 2,2)
@@ -89,19 +89,19 @@ $c.GetType().Name
 $c
 
 
-Write-Host "----------------Test 8----------------"
+Write-Output "----------------Test 8----------------"
 
 [int[]] $intA = 1, 2, 3
 $intA.Clear()
 $intA
 
 
-Write-Host "----------------Test 9----------------"
+Write-Output "----------------Test 9----------------"
 
 $a = @(0 .. 3)
 $a.ForEach({ $_ * $_})
 
 
-Write-Host "----------------Test 10----------------"
+Write-Output "----------------Test 10----------------"
 
 ("one", "two", "three").ForEach("ToUpper")
