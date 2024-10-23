@@ -21,7 +21,15 @@ Start-Job -FilePath C:\Scripts\Sample.ps1
 
 
 Write-Output "----------------Test 4----------------"
-# Get a process using a background job.
+# Run a function as a background job.
+function Loop10 {
+    for ($i = 0; $i -le 10; $i++)
+    {
+        Start-Sleep -Seconds 1
+    }
+}
+
+$j = Start-Job -ScriptBlock ${Function:Loop10}
 
 
 Write-Output "----------------Test 5----------------"
