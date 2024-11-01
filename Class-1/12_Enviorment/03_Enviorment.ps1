@@ -1,5 +1,5 @@
 ###
-# Get/Set/Delete Enviorment example.
+# Get/Set/Delete/Edit Enviorment example.
 #
 # License - MIT.
 ###
@@ -18,3 +18,12 @@ Write-Output "----------------Test 2----------------"
 Write-Output "----------------Test 3----------------"
 # Delete an environment variable.
 [Environment]::SetEnvironmentVariable("VAR_TEST", $null, "Machine")
+
+
+Write-Output "----------------Test 4----------------"
+# Add an environment variable.
+$INCLUDE = "C:\tmp"
+$OLDPATH = [System.Environment]::GetEnvironmentVariable('PATH','machine')
+$NEWPATH = "$OLDPATH;$INCLUDE"
+[Environment]::SetEnvironmentVariable("PATH", "$NEWPATH", "Machine")
+($env:PATH).split(";")
