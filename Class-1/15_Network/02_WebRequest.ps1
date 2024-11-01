@@ -152,3 +152,24 @@ Write-Output "----------------Test 10----------------"
 Write-Output "----------------Test 11----------------"
 # Send a request to a Unix socket application.
 Invoke-WebRequest -Uri "http://localhost/v1.40/images/json/" -UnixSocket "/var/run/docker.sock"
+
+
+Write-Output "----------------Test 12----------------"
+# Get the HTTP headers using Powershell.
+$url = 'https://www.bing.com'
+$result = Invoke-WebRequest -Method HEAD -Uri $url -UseBasicParsing
+$result.RawContent
+
+
+Write-Output "----------------Test 13----------------"
+# Get the HTTP headers formatted as a table.
+$url = 'https://www.bing.com'
+$result = Invoke-WebRequest -Method HEAD -Uri $url -UseBasicParsing
+$result.Headers
+
+
+Write-Output "----------------Test 14----------------"
+# Get a specific item from the HTTP header.
+$url = 'https://www.bing.com'
+$result = Invoke-WebRequest -Method HEAD -Uri $url -UseBasicParsing
+$result.Headers.Date
