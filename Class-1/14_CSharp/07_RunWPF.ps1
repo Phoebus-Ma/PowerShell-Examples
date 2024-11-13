@@ -1,5 +1,5 @@
 ###
-#
+# Run wpf example.
 #
 # License - MIT.
 ###
