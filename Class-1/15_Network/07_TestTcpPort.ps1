@@ -62,3 +62,8 @@ Write-Output "----------------Test 10----------------"
 # Measure the response time of the connectivity to the TCP port using older Powershell versions.
 Measure-Command {(New-Object System.Net.Sockets.TcpClient).ConnectAsync('google.com', 80).Wait(1000)} |
 ForEach-Object TotalSeconds
+
+
+Write-Output "----------------Test 11----------------"
+# Sends ICMP echo requests (pings) to test the connection to a remote host.
+Test-Connection -ComputerName bing.com -Count 4
