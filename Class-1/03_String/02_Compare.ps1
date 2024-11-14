@@ -4,7 +4,7 @@
 # License - MIT.
 ###
 
-# ------------------------Test 1------------------------
+Write-Output "----------------Test 1----------------"
 "abc" -eq "abc"                 # Output: True
 "abc" -eq "abc", "def"          # Output: False
 "abc" -ne "def"                 # Output: True
@@ -15,7 +15,7 @@
 "zzz", "def", "zzz" -eq "zzz"   # Output: zzz zzz
 
 
-# ------------------------Test 2------------------------
+Write-Output "----------------Test 2----------------"
 # Date comparison
 [DateTime]'2001-11-12' -lt [DateTime]'2020-08-01' # True
 
@@ -26,14 +26,14 @@
 'macOS' -clt 'MacOS'            # True; 'm' comes before 'M'
 
 
-# ------------------------Test 3------------------------
+Write-Output "----------------Test 3----------------"
 $a=' ','`','~','!','@','#','$','%','^','&','*','(',')','_','+','-','=',
    '{','}','[',']',':',';','"','''','\','|','/','?','.','>',',','<'
 $a -gt 'a'
 # Output: Nothing
 
 
-# ------------------------Test 4------------------------
+Write-Output "----------------Test 4----------------"
 "PowerShell" -like    "*shell"           # Output: True
 "PowerShell" -notlike "*shell"           # Output: False
 "PowerShell" -like    "Power?hell"       # Output: True
@@ -45,7 +45,7 @@ $a -gt 'a'
 "PowerShell", "Server" -notlike "*shell" # Output: Server
 
 
-# ------------------------Test 5------------------------
+Write-Output "----------------Test 5----------------"
 # Partial match test, showing how differently -match and -like behave
 "PowerShell" -match 'shell'        # Output: True
 "PowerShell" -like  'shell'        # Output: False
@@ -55,7 +55,7 @@ $a -gt 'a'
 'bag'        -notmatch 'b[iou]g'   # Output: True
 
 
-# ------------------------Test 6------------------------
+Write-Output "----------------Test 6----------------"
 "abc", "def" -contains "def"                  # Output: True
 "abc", "def" -notcontains "def"               # Output: False
 "Windows", "PowerShell" -contains "Shell"     # Output: False
@@ -64,10 +64,17 @@ $a -gt 'a'
 "abc", "def", "ghi" -notcontains "abc", "def" # Output: True
 
 
-# ------------------------Test 7------------------------
+Write-Output "----------------Test 7----------------"
 "def" -in "abc", "def"                  # Output: True
 "def" -notin "abc", "def"               # Output: False
 "Shell" -in "Windows", "PowerShell"     # Output: False
 "Shell" -notin "Windows", "PowerShell"  # Output: True
 "abc", "def" -in "abc", "def", "ghi"    # Output: False
 "abc", "def" -notin "abc", "def", "ghi" # Output: True
+
+
+Write-Output "----------------Test 8----------------"
+# Diff.
+$set1 = "A","B","C"
+$set2 = "C","D","E"
+Compare-Object $set1 $set2
