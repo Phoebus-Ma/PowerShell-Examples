@@ -4,8 +4,10 @@
 # License - MIT.
 ###
 
+$str = "hello world, happy every day."
+
 # Plain text to secure string.
-$secureString = ConvertTo-SecureString "hello world" -AsPlainText -Force
+$secureString = ConvertTo-SecureString $str -AsPlainText -Force
 Write-Output ("----1: " + $secureString)
 
 # Secure string to AES string.
