@@ -4,8 +4,6 @@
 # License - MIT.
 ###
 
-using namespace System.Windows
-
 [xml]$xaml = @"
 <Window x:Name="MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -13,7 +11,7 @@ using namespace System.Windows
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <ListView x:Name="lstv_hello" Width="100">
+        <ListView x:Name="lview_hello" Width="100">
             <ListViewItem>Item 1</ListViewItem>
             <ListViewItem>Item 2</ListViewItem>
             <ListViewItem>Item 3</ListViewItem>
@@ -28,7 +26,7 @@ $reader = (New-Object System.Xml.XmlNodeReader $xaml)
 $Window = [Windows.Markup.XamlReader]::Load($reader)
 
 # ListView.
-$listView = $Window.FindName("lstv_hello")
+$listView = $Window.FindName("lview_hello")
 
 $view1 = New-Object System.Windows.Controls.ListViewItem
 $view1.Content = "Item 4"
