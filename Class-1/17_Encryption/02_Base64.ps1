@@ -4,8 +4,9 @@
 # License - MIT.
 ###
 
-# Encoding string to base64.
 $str = "hello world, happy every day."
+
+# Encoding string to base64.
 $format = [System.Text.Encoding]::Unicode.GetBytes($str)
 $outBase64 =[Convert]::ToBase64String($format)
 $outBase64
