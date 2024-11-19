@@ -50,7 +50,8 @@ New-Item -Path C:\Test\$timestamp -Type Directory
 
 Write-Output "----------------Test 9----------------"
 # Example 9.
-Get-Date -UnixTimeSeconds 1577836800
+$dateTime = Get-Date
+([DateTimeOffset]$dateTime).ToUnixTimeSeconds()
 
 
 Write-Output "----------------Test 10----------------"
