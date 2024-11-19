@@ -67,3 +67,35 @@ Write-Output "----------------Test 11----------------"
 
 # Get date using invariant culture
 "$(Get-Date 2024-03-19)"
+
+
+Write-Output "----------------Test 12----------------"
+# Calculate total seconds for current time and specified time.
+$sptime = "21:11"
+
+# This is a string.
+$start = (Get-Date -Format "yyyyMMdd-")
+Write-Output ($start)
+
+# String.
+$start += $sptime + ":00"
+Write-Output ($start)
+
+# Converts string to datetime object.
+$start = [datetime]::ParseExact("$start", "yyyyMMdd-HH:mm:ss", $null)
+Write-Output ($start)
+
+if ($start -ge (Get-Date)) {
+    $totaltime = ($start - (Get-Date))
+}
+else {
+    $totaltime = ((Get-Date) - $start)
+}
+
+Write-Output ($totaltime.TotalSeconds)
+
+
+Write-Output "----------------Test 13----------------"
+# Log file.
+$file += "log-" + (Get-Date -Format "yyyyMMdd-HHmmss") + ".csv"
+Write-Output ($file)
