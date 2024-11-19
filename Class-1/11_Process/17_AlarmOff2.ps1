@@ -22,8 +22,7 @@ try {
         return
     }
 
-    $timespan = [TimeSpan]::Parse($totaltime)
-    $sec = "-s -t " + [int]$timespan.TotalSeconds
+    $sec = "-s -t " + [int]$totaltime.TotalSeconds
     $sec
 
     Start-Process -FilePath "shutdown" -ArgumentList $sec
