@@ -41,3 +41,22 @@ $jsonPath = ".\res\JsonFile3.json"
         Num = (Get-Random).ToString()
     }
 } | ConvertTo-Json | Out-File -FilePath $jsonPath -Append
+
+
+Write-Output "----------------Test 4----------------"
+# Composing json files.
+$jsonPath = ".\res\JsonFile4.json"
+
+$content = 1..5 | ForEach-Object {
+    New-Object PSObject -Property @{
+        Id = $_
+        Num = (Get-Random).ToString()
+    }
+} 
+
+$data = @{
+    hello1 = 'hello'
+    hello2 = $content
+}
+
+$data | ConvertTo-Json | Out-File -FilePath $jsonPath -Append
