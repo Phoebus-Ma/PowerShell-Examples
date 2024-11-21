@@ -16,9 +16,9 @@ function LoadXml ($filename) {
 }
 
 # Load the XAML files.
-$XmlTabWindow = LoadXml("$PSScriptRoot\Xaml\TabWindow.xaml")
-$XmlPage1 = LoadXml("$PSScriptRoot\Xaml\TabPage1.xaml")
-$XmlPage2 = LoadXml("$PSScriptRoot\Xaml\TabPage2.xaml")
+$XmlTabWindow = LoadXml("$PSScriptRoot\res\TabWindow.xaml")
+$XmlPage1 = LoadXml("$PSScriptRoot\res\TabPage1.xaml")
+$XmlPage2 = LoadXml("$PSScriptRoot\res\TabPage2.xaml")
 
 # Collection storing references to all named WPF controls in the UI.
 $UIControls = [hashtable]::Synchronized(@{})

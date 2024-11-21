@@ -15,8 +15,8 @@ function LoadXml ($filename) {
 }
 
 # Load the XAML files.
-$XmlMainWindow = LoadXml("$PSScriptRoot\Xaml\MainWindow.xaml")
-$XmlSecWindow  = LoadXml("$PSScriptRoot\Xaml\SecWindow.xaml")
+$XmlMainWindow = LoadXml("$PSScriptRoot\res\MainWindow.xaml")
+$XmlSecWindow  = LoadXml("$PSScriptRoot\res\SecWindow.xaml")
 
 # Collection storing references to all named WPF controls in the UI.
 $UIControls = [hashtable]::Synchronized(@{})
